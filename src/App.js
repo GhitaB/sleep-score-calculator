@@ -66,7 +66,10 @@ const SelectTime = (props) => {
 
 const SleepScore = (props) => {
   return (
-    <h1>{props.score}</h1>
+    <>
+      <p>Your sleep score:</p>
+      <h1>{props.score}</h1>
+    </>
   )
 }
 

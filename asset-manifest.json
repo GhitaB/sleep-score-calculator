@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/sleep-score-calculator/static/css/main.18dfadee.css",
-    "main.js": "/sleep-score-calculator/static/js/main.a7fc8a34.js",
+    "main.js": "/sleep-score-calculator/static/js/main.4531d34a.js",
     "static/js/787.e582e621.chunk.js": "/sleep-score-calculator/static/js/787.e582e621.chunk.js",
     "static/media/logo.svg": "/sleep-score-calculator/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/sleep-score-calculator/index.html",
     "main.18dfadee.css.map": "/sleep-score-calculator/static/css/main.18dfadee.css.map",
-    "main.a7fc8a34.js.map": "/sleep-score-calculator/static/js/main.a7fc8a34.js.map",
+    "main.4531d34a.js.map": "/sleep-score-calculator/static/js/main.4531d34a.js.map",
     "787.e582e621.chunk.js.map": "/sleep-score-calculator/static/js/787.e582e621.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.18dfadee.css",
-    "static/js/main.a7fc8a34.js"
+    "static/js/main.4531d34a.js"
   ]
 }

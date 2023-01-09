@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react'
-import Select from 'react-select'
+import React, { useState } from 'react';
+import Select from 'react-select';
 
 const hours = [
   { value: 10, label: '8 hours' },
@@ -15,7 +15,7 @@ const hours = [
   { value: 2, label: '4 hours' },
   { value: 1, label: '3.5 hours' },
   { value: 0, label: '3 hours' },
-]
+];
 
 const time = [
   { value: 10, label: '22:00' },
@@ -34,7 +34,7 @@ const time = [
   { value: -3, label: '02:20' },
   { value: -4, label: '02:40' },
   { value: -5, label: '03:00' },
-]
+];
 
 const SelectHours = () => (
   <Select options={hours} />
@@ -44,12 +44,30 @@ const SelectTime = () => (
   <Select options={time} />
 )
 
+const SleepScore = (props) => {
+  return (
+    <h1>{props.score}</h1>
+  )
+}
+
 function App() {
+  const [score, setScore] = useState(10);
+  const [hoursScore, setHoursScore] = useState(10);
+  const [timeScore, setTimeScore] = useState(10);
+
+  const updateScore = () => {
+    const score = (timeScore + hoursScore) / 2;
+    setScore(score);
+  }
+
   return (
     <div className="App">
-      <h1>10</h1>
+      <SleepScore score={score} />
       <SelectHours />
       <SelectTime />
+      <button onClick={updateScore}>
+        Refresh
+      </button>
     </div>
   );
 }

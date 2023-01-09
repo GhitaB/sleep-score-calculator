@@ -36,13 +36,21 @@ const time = [
   { value: -5, label: '03:00' },
 ];
 
-const SelectHours = () => (
-  <Select options={hours} />
-)
+const SelectHours = () => {
+  const handleChange = (selected) => {
+    console.log(selected);
+  };
 
-const SelectTime = () => (
-  <Select options={time} />
-)
+  return (<Select options={hours} onChange={handleChange}  />)
+}
+
+const SelectTime = () => {
+  const handleChange = (selected) => {
+    console.log(selected);
+  };
+
+  return (<Select options={time} onChange={handleChange} />)
+}
 
 const SleepScore = (props) => {
   return (

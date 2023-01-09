@@ -42,7 +42,7 @@ const SelectHours = (props) => {
     console.log(selected);
   };
 
-  return (<Select options={hours} onChange={handleChange}  />)
+  return (<Select className="select-hours" options={hours} onChange={handleChange}  />)
 }
 
 const SelectTime = (props) => {
@@ -51,7 +51,7 @@ const SelectTime = (props) => {
     console.log(selected);
   };
 
-  return (<Select options={time} onChange={handleChange} />)
+  return (<Select className="select-time" options={time} onChange={handleChange} />)
 }
 
 const SleepScore = (props) => {
@@ -84,7 +84,7 @@ function App() {
       <SelectHours onChange={updateHoursScore} />
       <SelectTime onChange={updateTimeScore} />
       <button onClick={updateScore}>
-        Refresh
+        Calculate
       </button>
     </div>
   );

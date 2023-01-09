@@ -36,16 +36,18 @@ const time = [
   { value: -5, label: '03:00' },
 ];
 
-const SelectHours = () => {
+const SelectHours = (props) => {
   const handleChange = (selected) => {
+    props.onChange(selected.value);
     console.log(selected);
   };
 
   return (<Select options={hours} onChange={handleChange}  />)
 }
 
-const SelectTime = () => {
+const SelectTime = (props) => {
   const handleChange = (selected) => {
+    props.onChange(selected.value);
     console.log(selected);
   };
 
@@ -63,6 +65,14 @@ function App() {
   const [hoursScore, setHoursScore] = useState(10);
   const [timeScore, setTimeScore] = useState(10);
 
+  const updateHoursScore = (newScore) => {
+    setHoursScore(newScore);
+  }
+
+  const updateTimeScore = (newScore) => {
+    setTimeScore(newScore);
+  }
+
   const updateScore = () => {
     const score = (timeScore + hoursScore) / 2;
     setScore(score);
@@ -71,8 +81,8 @@ function App() {
   return (
     <div className="App">
       <SleepScore score={score} />
-      <SelectHours />
-      <SelectTime />
+      <SelectHours onChange={updateHoursScore} />
+      <SelectTime onChange={updateTimeScore} />
       <button onClick={updateScore}>
         Refresh
       </button>

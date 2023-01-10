@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import Select from 'react-select';
@@ -20,7 +19,6 @@ const SelectHours = (props) => {
 
   const handleChange = (selected) => {
     props.onChange(selected.value);
-    console.log(selected);
   };
 
   return (
@@ -53,7 +51,6 @@ const SelectTime = (props) => {
 
   const handleChange = (selected) => {
     props.onChange(selected.value);
-    console.log(selected);
   };
 
   return (

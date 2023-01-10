@@ -78,14 +78,6 @@ function App() {
   const [hoursScore, setHoursScore] = useState(10);
   const [timeScore, setTimeScore] = useState(10);
 
-  const updateHoursScore = (newScore) => {
-    setHoursScore(newScore);
-  }
-
-  const updateTimeScore = (newScore) => {
-    setTimeScore(newScore);
-  }
-
   const updateScore = () => {
     const score = (timeScore + hoursScore) / 2;
     setScore(score);
@@ -94,8 +86,8 @@ function App() {
   return (
     <div className="App">
       <SleepScore score={score} />
-      <SelectHours onChange={updateHoursScore} />
-      <SelectTime onChange={updateTimeScore} />
+      <SelectHours onChange={setHoursScore} />
+      <SelectTime onChange={setTimeScore} />
       <button onClick={updateScore}>
         Calculate
       </button>
